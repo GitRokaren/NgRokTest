@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.2 on win32)" generated="20210421 12:01:13.305" rpa="false">
+<suite id="s1" name="TestNGROK" source="C:\Users\jeffe\Desktop\Eclipse_2021\Eclipse_2021_workspace\TestNGROK">
+<suite id="s1-s1" name="NgRokGit" source="C:\Users\jeffe\Desktop\Eclipse_2021\Eclipse_2021_workspace\TestNGROK\NgRokGit">
+<suite id="s1-s1-s1" name="NgRokGitTest" source="C:\Users\jeffe\Desktop\Eclipse_2021\Eclipse_2021_workspace\TestNGROK\NgRokGit\NgRokGitTest.robot">
+<test id="s1-s1-s1-t1" name="JenkinsTest">
+<kw name="RandomSummarizeKW">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>random.sample(range(1,11),4)</arg>
+<arg>random</arg>
+</arguments>
+<assign>
+<var>@{Numbers}</var>
+</assign>
+<msg timestamp="20210421 12:01:13.557" level="INFO">@{Numbers} = [ 10 | 5 | 8 | 6 ]</msg>
+<status status="PASS" starttime="20210421 12:01:13.555" endtime="20210421 12:01:13.557"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${Numbers}[0]+${Numbers}[1]+${Numbers}[2]+${Numbers}[3]</arg>
+</arguments>
+<assign>
+<var>${Sum}</var>
+</assign>
+<msg timestamp="20210421 12:01:13.562" level="INFO">${Sum} = 29</msg>
+<status status="PASS" starttime="20210421 12:01:13.558" endtime="20210421 12:01:13.563"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>20</arg>
+</arguments>
+<assign>
+<var>${Test}</var>
+</assign>
+<msg timestamp="20210421 12:01:13.566" level="INFO">${Test} = 20</msg>
+<status status="PASS" starttime="20210421 12:01:13.565" endtime="20210421 12:01:13.566"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<arguments>
+<arg>${Sum}&gt;=${Test}</arg>
+</arguments>
+<assign>
+<var>${Result}</var>
+</assign>
+<msg timestamp="20210421 12:01:13.569" level="INFO">${Result} = True</msg>
+<status status="PASS" starttime="20210421 12:01:13.567" endtime="20210421 12:01:13.570"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${Result}==False</arg>
+<arg>LogIfFailKW</arg>
+</arguments>
+<status status="PASS" starttime="20210421 12:01:13.571" endtime="20210421 12:01:13.572"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${Result}==False</arg>
+<arg>fail</arg>
+</arguments>
+<status status="PASS" starttime="20210421 12:01:13.573" endtime="20210421 12:01:13.574"></status>
+</kw>
+<status status="PASS" starttime="20210421 12:01:13.554" endtime="20210421 12:01:13.575"></status>
+</kw>
+<status status="PASS" starttime="20210421 12:01:13.552" endtime="20210421 12:01:13.576" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20210421 12:01:13.543" endtime="20210421 12:01:13.581"></status>
+</suite>
+<status status="PASS" starttime="20210421 12:01:13.530" endtime="20210421 12:01:13.587"></status>
+</suite>
+<status status="PASS" starttime="20210421 12:01:13.476" endtime="20210421 12:01:13.591"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="TestNGROK">TestNGROK</stat>
+<stat pass="1" fail="0" id="s1-s1" name="NgRokGit">TestNGROK.NgRokGit</stat>
+<stat pass="1" fail="0" id="s1-s1-s1" name="NgRokGitTest">TestNGROK.NgRokGit.NgRokGitTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
