@@ -18,3 +18,4 @@ JenkinsTest
     
 MyWebhookTest
     Log    Hello webhook!   
+    Log    Second attempt    
