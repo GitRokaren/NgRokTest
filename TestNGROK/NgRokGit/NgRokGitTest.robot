@@ -15,3 +15,6 @@ RandomSummarizeKW
     
 JenkinsTest
     RandomSummarizeKW
+    
+MyWebhookTest
+    Log    Hello webhook!   
