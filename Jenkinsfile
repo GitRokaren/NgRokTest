@@ -32,10 +32,10 @@ pipeline {
                     sh "echo 'maybe variable next?'"
                     sh "echo \$(cat LatestCommitID)"
                     sh "echo 'Ello Guvnor'" 
-                    sh "git revert \$(cat LatestCommitID)"
+                    //sh "git revert \$(cat LatestCommitID)"
                     
-                    sh "git log -n 1 --pretty=format:%H -- NgRokGit> LatestCommitID"
-                    sh "cat LatestCommitID"
+                    //sh "git log -n 1 --pretty=format:%H -- NgRokGit> LatestCommitID"
+                    //sh "cat LatestCommitID"
                 }
                 dir("${WORKSPACE}/TestNGROK/NgRokGit/"){
                     sh "python -m robot NgRokGitTest.robot"

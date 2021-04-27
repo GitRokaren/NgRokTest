@@ -20,4 +20,3 @@ MyWebhookTest
     Log    Hello webhook!   
     Log    Second attempt    
     Log    Third attempt    
-    Log    fourth attempt
