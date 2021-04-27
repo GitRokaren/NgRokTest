@@ -36,6 +36,7 @@ pipeline {
                     
                     //sh "git log -n 1 --pretty=format:%H -- NgRokGit> LatestCommitID"
                     //sh "cat LatestCommitID"
+                    sh "echo Hello eclipse"
                 }
                 dir("${WORKSPACE}/TestNGROK/NgRokGit/"){
                     sh "python -m robot NgRokGitTest.robot"
